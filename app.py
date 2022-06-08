@@ -37,6 +37,11 @@ app.layout = html.Div(children=[
     html.H1('Virginia Census Data 2017 - Modified by Prerana'),
     # Dropdowns
     html.Div(children=[
+        # right side
+        html.Div([
+                dcc.Graph(id='va-map')
+            ], className='nine columns'),
+        ], className='twelve columns'),
         # left side
         html.Div([
                 html.H6('Select census variable:'),
@@ -46,11 +51,6 @@ app.layout = html.Div(children=[
                     value='Employed'
                 ),
         ], className='three columns'),
-        # right side
-        html.Div([
-            dcc.Graph(id='va-map')
-        ], className='nine columns'),
-    ], className='twelve columns'),
 
     # Footer
     html.Br(),
