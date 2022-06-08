@@ -34,7 +34,7 @@ app.title=tabtitle
 ########### Layout
 
 app.layout = html.Div(children=[
-    html.H1('Virginia Census Data 2017'),
+    html.H1('Virginia Census Data 2017 - Modified by Prerana'),
     # Dropdowns
     html.Div(children=[
         # left side
@@ -43,7 +43,7 @@ app.layout = html.Div(children=[
                 dcc.Dropdown(
                     id='stats-drop',
                     options=[{'label': i, 'value': i} for i in varlist],
-                    value='MeanCommute'
+                    value='Employed'
                 ),
         ], className='three columns'),
         # right side
@@ -69,7 +69,7 @@ def display_results(selected_value):
     fig = go.Figure(go.Choroplethmapbox(geojson=counties,
                                     locations=df['FIPS'],
                                     z=df[selected_value],
-                                    colorscale='Blues',
+                                    colorscale='Twilight',
                                     text=df['County'],
                                     zmin=valmin,
                                     zmax=valmax,
