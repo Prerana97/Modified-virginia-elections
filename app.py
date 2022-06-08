@@ -39,9 +39,9 @@ app.layout = html.Div(children=[
     html.Div(children=[
         # right side
         html.Div([
-                dcc.Graph(id='va-map')
-            ], className='nine columns'),
-        ], className='twelve columns'),
+             dcc.Graph(id='va-map')
+        ], className='nine columns'),
+    
         # left side
         html.Div([
                 html.H6('Select census variable:'),
@@ -51,7 +51,7 @@ app.layout = html.Div(children=[
                     value='Employed'
                 ),
         ], className='three columns'),
-
+    ], className='twelve columns'),
     # Footer
     html.Br(),
     html.A('Code on Github', href=githublink),
